@@ -12,6 +12,10 @@ for s in range(1, 128 + 1):
             print(s, m)'''
 
 
+
+
+
+
 # 19 задание с двумя кучами
 
 # номер 27759 решу егэ
@@ -25,6 +29,10 @@ for s2 in range(1, 33 + 1):
         if f(8, s2, 0, m) == 1:
             print(s2, m)
             break'''
+
+
+
+
 
 
 # Задача № 4827 Поляков
@@ -42,6 +50,11 @@ for s in range(1, 55):
         if f(s, '', 0, m) == 1:
             print(s, m)
             break'''
+
+
+
+
+
 
 def f(s, p0, p1, c, m):
     if s >= 121: return c%2 == m%2
