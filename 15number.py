@@ -51,8 +51,24 @@ for a in range(1, 1001):
 #Код:
 
 
-'''def f(x, a):
-    return (x & 53 == 0) <= ((x & 19 != 0) <= (x & a != 0))
+# def f(x, a):
+#     return (x&25!=0)<=((x&19==0) <= (x&a!=0))
+#
+#
+# for a in range(1, 1001):
+#     fl = True
+#     for x in range(1, 1001):
+#         if f(x, a) == False:
+#             fl = False
+#             break
+#     if fl:
+#         print(a)
+#         break
+
+
+
+def f(x, a):
+    return (((x%2==0) <= (x%3!=0)) or (x + a >=100))
 
 
 for a in range(1, 1001):
@@ -63,8 +79,5 @@ for a in range(1, 1001):
             break
     if fl:
         print(a)
-        break'''
-
-
-
+        break
 
