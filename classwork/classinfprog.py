@@ -43,14 +43,25 @@
 # print(len(ans), max(ans))
 
 
-#Реуш егэ №17 - 47221
-l = [int(i) for i in open('17_4.txt')]
-ans = []
-max3 = -10001
-for i in range(len(l)):
-    if str(l[i])[-1] == '3':
-        max3 = max(max3, l[i])
-for i in range(len(l)-1):
-    if ((str(l[i])[-1]=='3' and str(l[i+1])[-1] != '3') or (str(l[i])[-1]!='3' and str(l[i+1])[-1] == '3')) and ((l[i]**2 + l[i+1]**2) >= max3**2):
-        ans.append((l[i]**2 + l[i+1]**2))
-print(len(ans), max(ans))
+# Реуш егэ №17 - 472213
+# l = [int(i) for i in open('17_4.txt')]
+# ans = []
+# max3 = -10001
+# for i in range(len(l)):
+#     if str(l[i])[-1] == '3':
+#         max3 = max(max3, l[i])
+# for i in range(len(l)-1):
+#     if ((str(l[i])[-1]=='3' and str(l[i+1])[-1] != '3') or (str(l[i])[-1]!='3' and str(l[i+1])[-1] == '3')) and ((l[i]**2 + l[i+1]**2) >= max3**2):
+#         ans.append((l[i]**2 + l[i+1]**2))
+# print(len(ans), max(ans))
+
+
+# Поляков №17 - 4496
+# l = [int(i) for i in open('17-205.txt')]
+# ans = []
+# for i in range(len(l)-1):
+#     if (l[i]-l[i+1])%2==0 and (l[i]-l[i+1])%37==0:
+#         ans.append(l[i] + l[i+1])
+# print(len(ans), max(ans))
+
+
