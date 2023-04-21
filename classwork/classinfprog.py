@@ -65,3 +65,48 @@
 # print(len(ans), max(ans))
 
 
+#Самостоятельная работа 21.04.23
+#1)
+f = open('24_1.txt').readline()
+k = 1
+m = 0
+for i in range(1, len(f)):
+    if f[i] == 'B' and f[i-1]=='B':
+        k += 1
+    else:
+        m = max(m, k)
+        k = 1
+m = max(m, k)
+print(m)
+#2)
+# f = open("24_3.txt")
+# x = f.read()
+# count = count_old = m = 0
+# for i in x:
+# 	if i == "D":
+# 		m = max(m, count + count_old + 1)
+# 		count_old = count
+# 		count = 0
+# 	else:
+#                 count += 1
+# m = max(m, count + count_old + 1)
+# print(m)
+
+
+
+
+#3)
+# f = open("24_1.txt")
+# x = f.read()
+# count = count_old = m = 0
+# for i in x:
+# 	if i == "D":
+# 		m = max(m, count + count_old + 1)
+# 		count_old = count
+# 		count = 0
+# 	else:
+#                 count += 1
+# m = max(m, count + count_old + 1)
+# print(m)
+
+
