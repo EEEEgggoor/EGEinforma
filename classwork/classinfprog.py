@@ -67,17 +67,17 @@
 
 #Самостоятельная работа 21.04.23
 #1)
-f = open('24_1.txt').readline()
-k = 1
-m = 0
-for i in range(1, len(f)):
-    if f[i] == 'B' and f[i-1]=='B':
-        k += 1
-    else:
-        m = max(m, k)
-        k = 1
-m = max(m, k)
-print(m)
+# f = open('24_1.txt').readline()
+# k = 1
+# m = 0
+# for i in range(1, len(f)):
+#     if f[i] == 'B' and f[i-1]=='B':
+#         k += 1
+#     else:
+#         m = max(m, k)
+#         k = 1
+# m = max(m, k)
+# print(m)
 #2)
 # f = open("24_3.txt")
 # x = f.read()
@@ -108,5 +108,13 @@ print(m)
 #                 count += 1
 # m = max(m, count + count_old + 1)
 # print(m)
+
+
+
+#Поляков №25 - 5378
+from fnmatch import *
+for i in range(0, 10**8, 161):
+    if fnmatch(str(i), '12*4?65'):
+        print(i, i//161)
 
 
