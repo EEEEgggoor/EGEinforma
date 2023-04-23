@@ -25,3 +25,20 @@
 #         k = '11' + n2[2:] + '1'
 #     if int(k, 2)>40:
 #         print(N)
+
+
+for N in range(1, 100):
+    n2 = bin(N)[2:]
+    N2 = n2 + n2[-1]
+    if n2.count('1')%2==0:
+        N2 = N2 + '0'
+    else:
+        N2 = N2 + '1'
+
+    if N2.count('1')%2==0:
+        N2 = N2 + '0'
+    else:
+        N2 = N2 + '1'
+    if int(N2, 2)>130:
+        print(N)
+        break
