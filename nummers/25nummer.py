@@ -1,4 +1,12 @@
-#компегэ   №7601
+def div(n):  # функция для нахождения делителей число
+    d = set()
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            d.add(i)
+            d.add(n // i)
+    return sorted(d)
+
+# компегэ   №7601
 # from fnmatch import *
 # for x in range(0, 10**8+1, 273):
 #     if fnmatch(str(x), '12??36*1'):
@@ -18,14 +26,7 @@
 #                 print(a, a//273)
 
 
-#поляков №2562
-def div(n):
-    d = set()
-    for i in range(1, int(n**0.5)+1):
-        if n % i == 0:
-            d.add(i)
-            d.add(n//i)
-    return sorted(d)
+# поляков №2562
 #
 #
 # for i in range(174457, 174505+1):
@@ -43,8 +44,17 @@ def div(n):
 #         print(sp[-1], sp[-2])
 
 
-#поляков №2575
+# поляков №2575
 # for i in range(244143, 1367821+1):
 #     sp = []
 #     if len(div(i)) == 5:
 #         print(div(i)[-3], div(i)[-2])
+
+
+# Поляков №2921
+# for i in range(193136, 193223+1):
+#     if len(div(i))==6:
+#         print(div(i)[-2], div(i)[-1])
+
+
+
