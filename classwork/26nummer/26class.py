@@ -29,3 +29,18 @@
 #         mx = s[i]
 #         k+=1
 # print(k ,mx)
+
+
+# КЭГЭ - 2686
+f = open('26_3.txt')
+k = f.readline()
+s = [list(map(int, x.split())) for x in f]
+s = sorted(s)
+k=0
+for i in range(len(s)):
+    if s[i][0]==s[i-1][0] and s[i][1]-s[i-1][1]==1:
+        k+=1
+        if k>=5:
+            print(s[i])
+    else:
+        k=0
