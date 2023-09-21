@@ -65,7 +65,7 @@
 #         print(n)
 
 
-#14)
+# 14)
 # for x in '0123456789abcdefghi':
 #     a = int(f'98897{x}21', 19) + int(f'2{x}923', 19)
 #     if a%18==0:
@@ -81,7 +81,7 @@
 # #Ответ - 469034148, 9
 
 
-#15)
+# 15)
 # def f(x, y, a):
 #     return (x+2*y<a) or (y>x) or (x>60)
 #
@@ -92,10 +92,10 @@
 #         break
 
 
-#Ответ-181
+# Ответ-181
 
 
-#16)
+# 16)
 # def f(n):
 #     if n>2024: return n
 #     if n<=2024: return n*f(n+1)
@@ -105,18 +105,35 @@
 # Ответ - 4090506
 
 
-#17)
-ans = []
-l = [int(i) for i in open('17.txt')]
-mx = 0
-for y in range(len(l)):
-    if l[y]%100==13:
-        mx = max(l[y], mx)
-print(mx)
+# 17)
+# ans = []
+# l = [int(i) for i in open('17.txt')]
+# mx = 0
+# for y in range(len(l)):
+#     if l[y] % 100 == 13:
+#         mx = max(l[y], mx)
+#
+# for x in range(len(l) - 2):
+#     if (((99 < l[x] < 1000 ) + (99 < l[x+1] < 1000) + (99 < l[x+2] < 1000))==2) and (l[x] + l[x + 1] + l[x + 2])<=mx:
+#         ans.append(l[x] + l[x + 1] + l[x + 2])
+# print(len(ans), max(ans))
 
 
 
-for x in range(len(l)-2):
-    if :
-        ans.append(sum(len(x), len(x+1), len(x+2)))
-print(max(ans), len(ans))
+ #18)2167,
+
+
+ #19-21)
+# def f(s, m):
+#     if s>=129: return m%2==0
+#     if m==0: return 0
+#     h = [f(s+1, m-1), f(s*2, m-1)]
+#     return any(h) if (m-1)%2==0 else all(h)
+#
+#
+# print('19)', [s for s in range(1, 129) if f(s, 2)])
+# print('20)', [s for s in range(1, 129) if f(s, 3) and not f(s, 1)])
+# print('21)', [s for s in range(1, 129) if f(s, 4)])
+
+
+#22) 4
