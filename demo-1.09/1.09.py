@@ -1,6 +1,6 @@
 # 1) 35
-
-
+#
+#
 # 2):
 # from itertools import *
 #
@@ -18,11 +18,11 @@
 #             if [f(**(dict(zip(p, r)))) for r in table] == [0, 0, 0]:
 #                 print(p)
 # # Ответ - wzyx
-
-
+#
+#
 # 3) 3570
-
-
+#
+#
 # 5)
 # s=[]
 # for N in range(1, 1000):
@@ -35,21 +35,21 @@
 #     if R>151:
 #         s.append(R)
 # print(min(s))
-
+#
 # Ответ - 163
-
-
+#
+#
 # 6) Ответ: 275
-
-
+#
+#
 # 7) Ответ: 288
-
-
+#
+#
 # 8)Ответ: 180
-
-
+#
+#
 # 12)
-
+#
 # for n in range(4, 10000):
 #     s = '5' + n * '2'
 #     while '52' in s or '2222' in s or '1122' in s:
@@ -63,8 +63,8 @@
 #     s1 = sum(s1)
 #     if s1==64:
 #         print(n)
-
-
+#
+#
 # 14)
 # for x in '0123456789abcdefghi':
 #     a = int(f'98897{x}21', 19) + int(f'2{x}923', 19)
@@ -79,8 +79,8 @@
 # s = s[::-1]
 # print(s.count('0'))
 # #Ответ - 469034148, 9
-
-
+#
+#
 # 15)
 # def f(x, y, a):
 #     return (x+2*y<a) or (y>x) or (x>60)
@@ -90,11 +90,11 @@
 #     if all(f(x, y, a)==1 for x in range(1000) for y in range(1000)):
 #         print(a)
 #         break
-
-
+#
+#
 # Ответ-181
-
-
+#
+#
 # 16)
 # def f(n):
 #     if n>2024: return n
@@ -103,8 +103,8 @@
 # print(f(2022)/f(2024))
 #
 # Ответ - 4090506
-
-
+#
+#
 # 17)
 # ans = []
 # l = [int(i) for i in open('17.txt')]
@@ -117,13 +117,13 @@
 #     if (((99 < l[x] < 1000 ) + (99 < l[x+1] < 1000) + (99 < l[x+2] < 1000))==2) and (l[x] + l[x + 1] + l[x + 2])<=mx:
 #         ans.append(l[x] + l[x + 1] + l[x + 2])
 # print(len(ans), max(ans))
-
-
-
- #18)2167,
-
-
- #19-21)
+#
+#
+#
+#  18)2167,
+#
+#
+#  19-21)
 # def f(s, m):
 #     if s>=129: return m%2==0
 #     if m==0: return 0
@@ -134,6 +134,39 @@
 # print('19)', [s for s in range(1, 129) if f(s, 2)])
 # print('20)', [s for s in range(1, 129) if f(s, 3) and not f(s, 1)])
 # print('21)', [s for s in range(1, 129) if f(s, 4)])
-
-
-#22) 4
+#
+#
+# 22) 4
+#
+# 23)
+# def F(s, f):
+#     if s > f or s==11: return 0
+#     if f==s: return 1
+#     if s<f: return F(s+1, f) + F(s*2, f) + F(s**2, f)
+#
+#
+# print(F(2, 20))
+# Ответ - 37
+#
+#
+# 24)
+# f = open('24.txt').readline()
+#
+# mx=-1
+# sp=[]
+# for i in range(len(f)):
+#     if f[i]=='T':
+#         sp.append(i)
+#
+# for i in range(101, len(sp)):
+#     len_ = sp[i] - sp[i-101] - 1
+#     mx = max(mx, len_)
+#
+# print(mx)
+#
+#
+# 25)
+# from fnmatch import *
+# for i in range(0, 10**10, 2024):
+#     if fnmatch(str(i),'1?2157*4'):
+#         print(i, i//2024)
