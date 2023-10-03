@@ -167,10 +167,19 @@
 #
 # 25)
 # from fnmatch import *
-# for i in range(0, 10**10, 2024):
+# for i in range(0, 10**10+1, 2024):
 #     if fnmatch(str(i),'1?2157*4'):
 #         print(i, i//2024)
 
 
-#26)
-s = open('26.txt').readline()
+# 26)
+k = 0
+s = 0
+f = [list(map(int, x.split())) for x in open('26.txt')]
+for i in range(1, len(f)):
+    for j in range(i, len(f) - 1):
+        s1 = []
+        if f[i][0] < f[j][1]:
+            pass
+        if f[i][1] == f[j][0]:
+            pass
