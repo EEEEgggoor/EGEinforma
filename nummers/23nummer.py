@@ -1,4 +1,4 @@
-#Поляков №26
+# Поляков №26
 
 # def f(start, finish):
 #     if start>finish or start==25: return 0
@@ -9,7 +9,7 @@
 # print(f(2, 14) * f(14, 29))
 
 
-#Поляков №445
+# Поляков №445
 # def F(s, f):
 #     if s>f or s==10: return 0
 #     if s==f: return 1
@@ -18,7 +18,7 @@
 # print(F(1, 21))
 
 
-#Поляков №446
+# Поляков №446
 # def F(s, f):
 #     if s>f: return 0
 #     if s==f: return 1

@@ -83,6 +83,8 @@ for a in range(1, 1001):
 
 def f(a, x):
     return (x & a == 0) <= ((x & 31 != 0) <= (x & 35 != 0))
+
+
 for a in range(50, 121):
     fl = True
     for x in range(1, 1001):

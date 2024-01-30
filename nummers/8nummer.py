@@ -28,5 +28,3 @@ from itertools import *
 #     if s.count('*') < (6 - s.count('*')) and '**' not in s:
 #         k+=1
 # print(k)
-
-

@@ -14,5 +14,5 @@ with open('26_1.txt') as f:
     for i in range(1, len(s)):
         if s[i] + 3 <= mini:
             mini = s[i]
-            k+=1
+            k += 1
 print(k, mini)
