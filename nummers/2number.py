@@ -1,40 +1,3 @@
-# def f(x, y, z):
-#     return ((x == z) or (( x<= (y and z))))  #<<<логическое выражение из задания
-#
-# print('x y z')
-# for x in range(0, 2):
-#     for y in range(0, 2):
-#         for z in range(0, 2):
-#             if f(x, y, z) == 0:
-#                 print(x, y, z)
-
-
-# def f(x, y, z, w):
-#     return ((z and y) or ((x <= z) == (y <= w)))  #<<<логическое выражение из задания
-#
-# print('x y z w')
-# for x in range(0, 2):
-#     for y in range(0, 2):
-#         for z in range(0, 2):
-#             for w in range(0, 2):
-#                 if f(x, y, z, w) == 0:
-#                     print(x, y, z, w)
-
-
-# def f(x, y, z, w):
-#     return w or (x <= y) and (not z <= x)
-#
-#
-# print('x y z w')
-# for x in range(0, 2):
-#     for y in range(0, 2):
-#         for z in range(0, 2):
-#             for w in range(0, 2):
-#                 if f(x, y, z, w) == 0:
-#                     print(x, y, z, w)
-
-
-# 6691
 from itertools import *
 
 
@@ -51,4 +14,22 @@ from itertools import *
 #             if [f(**dict(zip(x, r))) for r in table]==[1, 1, 1]:
 #                 print(x)
 
+# 6365
+# def f1(x, y, z, w):
+#     return (w <= z) == (y <= x)
+#
+#
+# def f2(x, y, z, w):
+#     return (w <= z) and (not (x) == y)
+#
+#
+# for a in product([0, 1], repeat=3):
+#     table = [(a[0], 0, 0, 0),
+#              (a[1], 0, 1, 1),
+#              (0, 0, a[2], 0)]
+#     if len(table) == len(set(table)):
+#         for x in permutations('xyzw'):
+#             if ([f1(**dict(zip(x, r))) for r in table][0] == 0 and [f2(**dict(zip(x, r))) for r in table][1] == 0 and
+#                     [f1(**dict(zip(x, r))) for r in table][2] == 0 and [f2(**dict(zip(x, r))) for r in table][2] == 1):
+#                 print(x)
 
