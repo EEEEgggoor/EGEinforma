@@ -87,17 +87,61 @@
 
 
 # kompege12478
-f = open("26_4.txt")
+# f = open("26_4.txt")
+# n = f.readline()
+# f = [tuple(map(int, x.split())) for x in f]
+# f.sort()
+# n = (tuple(map(int, n.split())))[1:]
+# sp = []
+# for i in range(len(f)):
+#     if f[i][0]!=f[i+1][0]:
+#         sp.append(f[i])
+#         break
+# mx = []
+# for i in range(len(f)-1):
+#     if sp[-1][1]==f[i][0]:
+#         for j in range(i, len(f)):
+#             if f[i][0]!=f[i+1][0]:
+#                 sp.append(f[i])
+#                 break
+#
+#
+# print(len(sp))
+
+
+# kompege11605
+f = open("26_5.txt")
 n = f.readline()
 f = [tuple(map(int, x.split())) for x in f]
 f.sort()
-n = (tuple(map(int, n.split())))[1:]
-sp = []
+n = (tuple(map(int, n.split())))
 
 
 
+sp=[]
+sp.append(f[0][1])
+per = f[0][1]
 
 
+for i in range(len(f)):
+    if f[i][0]>per:
+        sp.append(f[i-1][1])
+        per = f[i-1][1]
 
+    if f[i][0]==per:
+        for j in range(i, len(f)):
+            if f[i][0] != f[i + 1][0]:
+                sp.append(f[i][1])
+                break
+        per = f[i][1]
 
+print(n[1] - len(sp), len(sp))
+print(f[:1000])
+print(sp[:100])
 
+# temp = 25
+#
+# for ele in f:
+#     if ele[0] < temp:
+#         temptemp = ele[0]
+#     temp =temptemp
