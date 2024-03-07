@@ -97,47 +97,57 @@
 #     if f[i][0]!=f[i+1][0]:
 #         sp.append(f[i])
 #         break
-# mx = []
+#
+# sm=0
+# mx = -100
 # for i in range(len(f)-1):
-#     if sp[-1][1]==f[i][0]:
+#     if f[i][0]==sp[-1][1]:
 #         for j in range(i, len(f)):
-#             if f[i][0]!=f[i+1][0]:
-#                 sp.append(f[i])
+#             if f[j][0]!=f[j+1][0]:
+#                 sp.append(f[j])
 #                 break
 #
+# for i in range(len(sp)):
+#     sm = f[i][1] - f[i][0]
+#     mx = max(sm, mx)
 #
-# print(len(sp))
+#
+# print(len(sp), mx)
 
 
 # kompege11605
-f = open("26_5.txt")
-n = f.readline()
-f = [tuple(map(int, x.split())) for x in f]
-f.sort()
-n = (tuple(map(int, n.split())))
-
-
-
-sp=[]
-sp.append(f[0][1])
-per = f[0][1]
-
-
-for i in range(len(f)):
-    if f[i][0]>per:
-        sp.append(f[i-1][1])
-        per = f[i-1][1]
-
-    if f[i][0]==per:
-        for j in range(i, len(f)):
-            if f[i][0] != f[i + 1][0]:
-                sp.append(f[i][1])
-                break
-        per = f[i][1]
-
-print(n[1] - len(sp), len(sp))
-print(f[:1000])
-print(sp[:100])
+# f = open("26_5.txt")
+# n = f.readline()
+# f = [tuple(map(int, x.split())) for x in f]
+# f.sort()
+# n = (tuple(map(int, n.split())))
+#
+#
+#
+# sp=[]
+# sp.append(f[0][1])
+# per = f[0][1]
+#
+#
+# for i in range(len(f)):
+#     if f[i][0]>per:
+#         for j in range(i-1, len(f)):
+#             if f[j][0] != f[j + 1][0]:
+#                 sp.append(f[j])
+#                 per = f[j][1]
+#                 break
+#
+#     if f[i][0]==per:
+#         for j in range(i, len(f)):
+#             if f[j][0] != f[j + 1][0]:
+#                 sp.append(f[j])
+#                 per = f[j][1]
+#                 break
+#
+#
+# print(n[1] - len(sp), len(sp))
+# print(f[:1000])
+# print(sp[:100])
 
 # temp = 25
 #
