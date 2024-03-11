@@ -1,95 +1,89 @@
-# Вариант 1
-# 1) Для какого наибольшего целого неотрицательного A выражение
-# (x + y ≤ 22) ∨ (y ≤ x – 6) ∨ (y ≥ A))
-# тождественно истинно, т.е. принимает значение 1 при любых целых неотрицательных x и y?
-
-# Код:
-
-
-'''def f(x, y, a):
-    return (x + y <= 22) or (y <= x - 6) or (y >= a)
-
-
-for a in range(1, 1001):
-    fl = True
-    for x in range(1, 1001):
-        for y in range(1, 1001):
-            if f(x, y, a) == False:
-                fl = False
-                break
-        if fl == False:
-            fl = False
-            break
-    if fl == True:
-        print(a)'''
-
-# 2)Обозначим через ДЕЛ(n, m) утверждение «натуральное число n делится без остатка на натуральное число m». Для какого наименьшего натурального числа A формула
-# ДЕЛ(A, 9) ∧ (ДЕЛ(280, x) → (¬ДЕЛ(A, x) → ¬ДЕЛ(730, x)))
-# тождественно истинна (то есть принимает значение 1 при любом натуральном значении переменной х)?
-
-# Код:
-import asyncio
-
-'''def f(x, a):
-    return (a % 9 == 0) and ((280 % x == 0) <= ((a % x != 0) <= (730 % x != 0)))
-
-
-for a in range(1, 1001):
-    fl = True
-    for x in range(1, 1001):
-        if f(x, a) == False:
-            fl = False
-            break
-    if fl:
-        print(a)
-        break'''
-
-
-# 3)Введём выражение M & K, обозначающее поразрядную конъюнкцию M и K (логическое «И» между соответствующими битами двоичной записи). Определите наименьшее натуральное число A, такое что выражение
-# (X & 53 = 0) → ((X & 19 ≠ 0) → (X & A ≠ 0))
-# тождественно истинно (то есть принимает значение 1 при любом натуральном значении переменной X)?
-
-# Код:
-
-
+# 22 - polyakov
 # def f(x, a):
-#     return (x&25!=0)<=((x&19==0) <= (x&a!=0))
+#     return (x & 25 != 0) <= ((x & 17 == 0) <= (x & a != 0))
 #
 #
-# for a in range(1, 1001):
-#     fl = True
-#     for x in range(1, 1001):
-#         if f(x, a) == False:
-#             fl = False
-#             break
-#     if fl:
+# asp = []
+# for a in range(0, 1000):
+#     if all(f(x, a)==1 for x in range(0, 1000)):
 #         print(a)
-#         break
 
 
+# №370
 # def f(x, a):
-#     return (((x%2==0) <= (x%3!=0)) or (x + a >=100))
+#     return (x%a!=0) <= ((x%6==0) <= (x%4!=0))
 #
 #
-# for a in range(1, 1001):
-#     fl = True
-#     for x in range(1, 1001):
-#         if f(x, a) == False:
-#             fl = False
-#             break
-#     if fl:
+# asp = []
+# for a in range(1, 1000):
+#     if all(f(x, a)==1 for x in range(1, 1000)):
 #         print(a)
-#         break
-
-def f(a, x):
-    return (x & a == 0) <= ((x & 31 != 0) <= (x & 35 != 0))
 
 
-for a in range(50, 121):
-    fl = True
-    for x in range(1, 1001):
-        if f(a, x) == False:
-            fl = False
-            break
-    if fl:
+# №7267
+# def f(x, y, a):
+#     return (4*x + y > 115) or (x > 3*y) or (x + 4*y < a)
+#
+#
+#
+# for a in range(0, 1000):
+#     if any(f(x, y, a)==0 for x in range(0, 1000) for y in range(0, 1000)):
+#         print(a)
+
+
+# №6222
+# def f(x, y, a):
+#     return not((x+y-73)>0) or not(37-(x-y)>0) or (y-a>0)
+#
+# for a in range(1000):
+#     if all(f(x, y, a)==1 for x in range(1000) for y in range(1000)):
+#         print(a)
+
+
+# №5921
+# def f(x, a):
+#     return (x + a >= 160) or ((x%7==0) <= (not(x + (-17)>0)))
+#
+#
+# for a in range(1000):
+#     if all(f(x, a) for x in range(1000)):
+#         print(a)
+
+# №5920
+
+# def f(x, y, z, a):
+#     return ((z%115==0) or (y%78==0) or (x%51==0)) <= (x*y*z%a==0)
+#
+# for a in range(1, 500):
+#     if all(f(x, y, z, a) for x in range(1, 500) for y in range(1, 500) for z in range(1, 500)):
+#         print(a)
+
+# kompege - 7005
+# def f(a, x):
+#     return ((37+a+(x+45)==180) == (a+x+90==180)) and not(a+23<120)
+#
+# for a in range(1, 180):
+#     if all(f(a, x)==1 for x in range(1, 181)):
+#         print(a)
+
+
+# kompege - 5905
+# def f(x, y, z, a):
+#     return (x | 50 == x) or (y & 34 != 0) or (z | 24 != 24) or (x*y*z > (a//8))
+#
+#
+# for a in range(1, 100):
+#     if all(f(x, y, z, a)==1 for x in range(1, 100) for y in range(1, 100) for z in range(1, 100)):
+#         print(a)
+
+
+def treug(a, b, c):
+    return max(a, b, c) <= (a+b+c-max(a, b, c))
+
+def f(x, a):
+    return treug(a, 5, x) <= ((max(x, 11) <= 19) == (not treug(23, 13, x)))
+
+
+for a in range(1, 1000):
+    if all(f(x, a) for x in range(1, 1000)):
         print(a)
