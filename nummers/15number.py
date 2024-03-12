@@ -77,13 +77,126 @@
 #         print(a)
 
 
-def treug(a, b, c):
-    return max(a, b, c) <= (a+b+c-max(a, b, c))
+# def treug(a, b, c):
+#     return max(a, b, c) <= (a+b+c-max(a, b, c))
+#
+# def f(x, a):
+#     return treug(a, 5, x) <= ((max(x, 11) <= 19) == (not treug(23, 13, x)))
+#
+#
+# for a in range(1, 1000):
+#     if all(f(x, a) for x in range(1, 1000)):
+#         print(a)
 
-def f(x, a):
-    return treug(a, 5, x) <= ((max(x, 11) <= 19) == (not treug(23, 13, x)))
+
+# 4881
+# a = set()
+# p = {1, 12}
+# q = {12, 13, 14, 15, 16}
+# def f(x):
+#     return (not (x in a)) <= (not (x in p) and not (x in q))
+#
+# for x in range(-1000, 1000):
+#     if f(x) == 0:
+#         a.add(x)
+# print(a)
 
 
-for a in range(1, 1000):
-    if all(f(x, a) for x in range(1, 1000)):
-        print(a)
+# 3434
+# A = {x for x in range(1, 1000)}
+# P = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+# Q = {5, 10, 15, 20, 25, 30, 35, 40, 45, 50}
+#
+#
+# def f(x):
+#     return ((x in A) <= (x in P)) or (not (x in Q) <= (not (x in A)))
+#
+#
+# for x in range(1, 1000):
+#     if f(x) == 0:
+#         A.remove(x)
+# print(A, len(A))
+
+
+# kompege2081
+# from itertools import*
+#
+# b = ["".join(i) for i in product('01', repeat=8)]
+# a = set()
+# p = {i for i in b if i[:2]=='11'}
+# q = {i for i in b if i[-1]=='0'}
+#
+# def f(x):
+#     return (not (x in a)) <= ((x in p) or not(x in q))
+# for i in b:
+#     if f(i)==0:
+#         a.add(i)
+# print(len(a))
+
+
+# kompege4284
+# P = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+# Q = {2, 4, 8, 10}
+# A = set()
+# from itertools import *
+# k=0
+#
+# def f(x):
+#     return ((x in Q) <= (x in A)) and ((x in A) <= (x in P))
+#
+# for i in range(1, 11):
+#     for A in combinations(P, i):
+#         if all(f(x) for x in P):
+#             k+=1
+# print(k)
+
+
+# kompege1072
+# P = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30}
+# Q = {1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31}
+# A= {i for i in range(1, 1000)}
+#
+# def f(x):
+#     return ((x in A) <= (x in P)) and ((x in Q) <= (x not in A))
+#
+# for x in range(1, 1000):
+#     if f(x)==0:
+#         A.remove(x)
+# print(len(A))
+
+
+# kompege12924
+# P = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+# Q = {3, 6, 9, 12, 15, 18, 21, 24, 27, 30}
+# A= {i for i in range(1, 1000)}
+#
+# def f(x):
+#     return ((x in A) <= (x in P)) and (not(x in Q) <= (not(x in A)))
+#
+# for x in range(1, 1000):
+#     if f(x)==0:
+#         A.remove(x)
+# print(len(A))
+
+
+# kompege4283
+# P = {1,3,4,9,11,13,15,17,19,21}
+# Q = {3,6,9,12,15,18,21,24,27,30}
+# A = set()
+#
+# def f(x):
+#     return ((x in P) <= (x in A)) or ((x not in A) <= ((x not in Q)))
+#
+# for x in range(-1000, 1000):
+#     if f(x)==0:
+#         A.add(x)
+#
+# print(A, 9*3*21*15)
+
+
+# kompege3156
+P = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+Q = {5, 10, 15, 20, 25, 30, 35, 40, 45, 50}
+
+def f(x):
+    return ((x in A) <= (x in P)) and ((x in Q) <= (not(x in A)))
