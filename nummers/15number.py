@@ -194,9 +194,60 @@
 # print(A, 9*3*21*15)
 
 
-# kompege3156
-# P = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
-# Q = {5, 10, 15, 20, 25, 30, 35, 40, 45, 50}
-#
+# from itertools import *
 # def f(x):
-#     return ((x in A) <= (x in P)) and ((x in Q) <= (not(x in A)))
+#     P = 25 <= x <= 50
+#     Q = 54 <= x <= 75
+#     A = a1 <= x <= a2
+#     return Q <= ((P==Q) or ((not P) <= A))
+#
+# Ox = [i/10 for i in range(24*10, 76*10)]
+# ans = []
+# for a1, a2 in combinations(Ox, 2):
+#     if all(f(x) == 1 for x in Ox):
+#         ans.append(a2-a1)
+# print(min(ans), Ox)
+
+
+# from itertools import *
+# def f(x):
+#     P = 1 <= x <= 98
+#     Q = 25 <= x <= 42
+#     A = a1 <= x <= a2
+#     return Q <= (((not P) and Q) <= A)
+#
+# Ox = [i/10 for i in range(0*10, 99*10)]
+# ans = []
+# for a1, a2 in combinations(Ox, 2):
+#     if all(f(x) == 1 for x in Ox):
+#         ans.append(a2-a1)
+# print(min(ans))
+
+
+
+# def f(x, a):
+#     P = 5 <= x <= 54
+#     Q = 50 <= x <= 93
+#     return ((not P) and Q) <= (x>a)
+#
+# ans = []
+# for a in range(500):
+#     k=0
+#     for x in range(500):
+#         if (f(x, a) == 0):
+#             k+=1
+#     if k==20:
+#         ans.append(a)
+# print(min(ans))
+
+
+def f(x, a):
+    Q = 29 <= x <= 47
+
+    return ((x%3!=0) and (x not in {48, 52, 56})) <= ((abs(x-50) <= 7) <= (Q)) or (x & a == 0)
+
+ans = []
+for a in range(1, 500):
+    if all(f(x, a)==1 for x in range(500)):
+        ans.append(a)
+print(min(ans))
