@@ -121,7 +121,7 @@
 # kompege2081
 # from itertools import*
 #
-# b = ["".join(i) for i in product('01', repeat=8)]
+# b = ["".join(i) for i in product('01.04.24', repeat=8)]
 # a = set()
 # p = {i for i in b if i[:2]=='11'}
 # q = {i for i in b if i[-1]=='0'}
@@ -224,7 +224,6 @@
 # print(min(ans))
 
 
-
 # def f(x, a):
 #     P = 5 <= x <= 54
 #     Q = 50 <= x <= 93
@@ -241,13 +240,104 @@
 # print(min(ans))
 
 
-def f(x, a):
-    Q = 29 <= x <= 47
+# def f(x, a):
+#     Q = 29 <= x <= 47
+#
+#     return ((x%3!=0) and (x not in {48, 52, 56})) <= ((abs(x-50) <= 7) <= (Q)) or (x & a == 0)
+#
+# ans = []
+# for a in range(1, 500):
+#     if all(f(x, a)==1 for x in range(500)):
+#         ans.append(a)
+# print(min(ans))
 
-    return ((x%3!=0) and (x not in {48, 52, 56})) <= ((abs(x-50) <= 7) <= (Q)) or (x & a == 0)
 
-ans = []
-for a in range(1, 500):
-    if all(f(x, a)==1 for x in range(500)):
-        ans.append(a)
-print(min(ans))
+
+
+# def f(x, y, a):
+#     return (x*y < 140) or (y > a) or (x > a)
+#
+#
+# for a in range(1000):
+#     if all(f(x, y, a)==1 for x in range(1000) for y in range(1000)):
+#         print(a)
+
+
+# def f(x, a):
+#     return (x%a!=0) <= ((x%6==0) <= (x%9!=0))
+#
+# for a in range(1, 500):
+#     if all(f(x, a) for x in range(1, 500)):
+#         print(a)
+
+
+from itertools import*
+# def f(x, y):
+#     P = 10<=x<=40
+#     Q = 5<=x<=15
+#     R = 35<=x<=50
+#     A = a1<=x<=a2
+#     return (A or P) or (Q<=R)
+#
+# Ox = [i/10 for i in range(5*10, 50*10)]
+# ans = []
+# for a1, a2 in combinations(Ox, 2):
+#     if all(f(x, y) == 1 for x in Ox for y in Ox):
+#         ans.append(a2-a1)
+# print(min(ans))
+
+
+# def f(x):
+#     A = a1<=x<=a2
+#     P = 3<=x<=13
+#     Q = 12<=x<=22
+#     return (A<=P) or Q
+#
+# Ox = [i/10 for i in range(2*10, 23*10)]
+# ans = []
+# for a1, a2 in combinations(Ox, 2):
+#     if all(f(x) == 1 for x in Ox):
+#         ans.append(a2-a1)
+# print(max(ans))
+
+
+# def f(x, a):
+#     return ((x&57>0) or (x&99>0)) <= (x&a>0)
+#
+# for a in range(1000):
+#     if all(f(x, a)==1 for x in range(1000)):
+#         print(a)
+#         break
+
+
+
+# def f(x, a):
+#     return ((72%x==0)<= (not (120%x==0)))or(a-x>100)
+#
+# for a in range(1, 1000):
+#     if all(f(x, a)==1 for x in range(1, 1000)):
+#         print(a)
+#         break
+
+
+# def f(x):
+#     A = a1<=x<=a2
+#     P = 19<=x<=84
+#     Q = 4<=x<=51
+#     return (Q)<=(not(P)<= (not((Q) and not(A))))
+#
+# Ox = [i/10 for i in range(3*10, 85*10)]
+# ans = []
+# for a1, a2 in combinations(Ox, 2):
+#     if all(f(x) == 1 for x in Ox):
+#         ans.append(a2-a1)
+# print(min(ans))
+
+
+# def f(x, a):
+#     return x & 85 == 0 <= (x & 54 != 0 <= x & a != 0)
+#
+#
+# for a in range(1000):
+#     if all(f(x, a)==1 for x in range(1000)):
+#         print(a)
