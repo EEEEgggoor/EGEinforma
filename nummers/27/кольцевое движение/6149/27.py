@@ -15,7 +15,7 @@ sp = []
 for i in range(m, k-(m+1)):
     s=0
     if d[i]==0:
-        if sum(d[i-m:i])==0 and sum(d[i:i+(m+1)])==0:
+        if sum(d[i-m:i+(m+1)])==0:
             for j in range(k):
                 s+=min(abs(i-j), k-abs(i-j))*d[j]
             sp.append((s, i))
