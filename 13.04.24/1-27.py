@@ -4,7 +4,7 @@ from itertools import*
 #1)14
 #2)
 #
-# def f(x, y, z, w, u):
+# def f3(x, y, z, w, u):
 #     return ((x <= y) and (z == (not w))) <= (u == (x or z))
 #
 # for a in product([0, 1], repeat = 8):
@@ -14,7 +14,7 @@ from itertools import*
 #              (a[5], 0, a[6], a[7], 0)]
 #     if len(table)==len(set(table)):
 #         for x in permutations('xyzwu'):
-#             if [f(**dict(zip(x, r))) for r in table] == [0, 0, 0, 0]:
+#             if [f3(**dict(zip(x, r))) for r in table] == [0, 0, 0, 0]:
 #                 print(x)
 
 #3) ---
@@ -95,11 +95,11 @@ from itertools import*
 #             print(T)
 
 #15)
-# def f(x, a):
+# def f3(x, a):
 #     return ((x&57>0) or (x&99>0))<=(x&a>0)
 #
 # for a in range(1000):
-#     if all(f(x, a)==1 for x in range(1000)):
+#     if all(f3(x, a)==1 for x in range(1000)):
 #         print(a)
 #         break
 

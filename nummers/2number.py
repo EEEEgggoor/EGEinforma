@@ -1,7 +1,7 @@
 from itertools import *
 
 
-# def f(x, y, z, w):
+# def f3(x, y, z, w):
 #     return ((z == (not y)) and (not (x) or y) and w)
 #
 #
@@ -11,7 +11,7 @@ from itertools import *
 #              (a[3], a[4], a[5], 1)]
 #     if len(table)==len(set(table)):
 #         for x in permutations('xyzw'):
-#             if [f(**dict(zip(x, r))) for r in table]==[1, 1, 1]:
+#             if [f3(**dict(zip(x, r))) for r in table]==[1, 1, 1]:
 #                 print(x)
 
 # 6365
@@ -35,7 +35,7 @@ from itertools import *
 
 
 # 7664
-# def f(a, b, c, d):
+# def f3(a, b, c, d):
 #     return ((a and b) == (not (c))) and (b <= d)
 #
 #
@@ -44,7 +44,7 @@ from itertools import *
 #          (1, 0, 1, 0),
 #          (1, 0, 1, 1),
 #          (1, 1, 0, 0)]
-# if [f(**dict(zip(p, r))) for r in table]==[1, 1, 1, 1]:
+# if [f3(**dict(zip(p, r))) for r in table]==[1, 1, 1, 1]:
 #     print(1)
 
 

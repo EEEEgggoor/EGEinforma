@@ -12,15 +12,15 @@ def f(a):
 
 #2568 - polyakov
 # for i in range(164700, 164752+1):
-#     if len(f(i))==6:
-#         print(f(i)[4:])
+#     if len(f3(i))==6:
+#         print(f3(i)[4:])
 
 
 
 #2562 - polyakov
 # for i in range(174457, 174505+1):
-#     if len(f(i))==4:
-#         print(f(i)[1:-1])
+#     if len(f3(i))==4:
+#         print(f3(i)[1:-1])
 
 p=[]
 s=[]

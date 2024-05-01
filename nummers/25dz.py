@@ -9,7 +9,7 @@ def f(x):
 # k=0
 # for x in range(245_690, 245_756):
 #     k+=1
-#     if len(f(x))==2:
+#     if len(f3(x))==2:
 #         print(x, k)
 
 # from fnmatch import *

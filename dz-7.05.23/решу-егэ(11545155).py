@@ -1,5 +1,5 @@
 # номер-2
-# def f(x, y, z, w):
+# def f3(x, y, z, w):
 #     return (not x or y or z)==(not y and z and w)
 #
 #
@@ -8,7 +8,7 @@
 #     for y in range(2):
 #         for z in range(2):
 #             for w in range(2):
-#                 if f(x, y, z, w)==1:
+#                 if f3(x, y, z, w)==1:
 #                     print(x, y, z, w)
 
 
@@ -51,14 +51,14 @@
 
 
 # номер-15
-# def f(x, a):
+# def f3(x, a):
 #     return (x & a != 0) <= ((x & 36 == 0) <= (x & 6 != 0))
 #
 #
 # for a in range(0, 1001):
 #     fl = True
 #     for x in range(0, 1001):
-#         if f(x, a)==0:
+#         if f3(x, a)==0:
 #             fl = False
 #             break
 #     if fl:
@@ -66,11 +66,11 @@
 
 
 # номер-16
-# def f(n):
+# def f3(n):
 #     if n<=2: return n+1
-#     if n>2: return f(n-1) * f(n-2)
+#     if n>2: return f3(n-1) * f3(n-2)
 #
-# print(f(4))
+# print(f3(4))
 
 
 # номер-17
@@ -86,23 +86,23 @@
 
 
 # номер-19 20 21
-# def f(s, m):
+# def f3(s, m):
 #     if s>=65: return m%2==0
 #     if m==0: return 0
-#     h = [f(s+1, m-1), f(s*2, m-1)]
+#     h = [f3(s+1, m-1), f3(s*2, m-1)]
 #     return any(h) if (m-1)%2==0 else all(h)
 #
 #
-# print('19)', [s for s in range(1, 65) if f(s, 2)])
-# print('20)', [s for s in range(1, 65) if f(s, 3)])
-# print('21)', [s for s in range(1, 65) if f(s, 4)])
+# print('19)', [s for s in range(1, 65) if f3(s, 2)])
+# print('20)', [s for s in range(1, 65) if f3(s, 3)])
+# print('21)', [s for s in range(1, 65) if f3(s, 4)])
 
 
 # номер-23
-# def F(s, f):
-#     if s>f or s==12: return 0
-#     if s==f: return 1
-#     if s<f: return F(s+1, f) + F(s+3, f)
+# def F(s, f3):
+#     if s>f3 or s==12: return 0
+#     if s==f3: return 1
+#     if s<f3: return F(s+1, f3) + F(s+3, f3)
 #
 # print(F(1, 10) + F(10, 15))
 

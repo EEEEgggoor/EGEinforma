@@ -3,7 +3,7 @@ from itertools import*
 
 
 #2)
-# def f(x, y, z, w):
+# def f3(x, y, z, w):
 #     return (x and (not z)) or (y==z) or (not(w))
 #
 # for a in product([0, 1], repeat = 4):
@@ -12,7 +12,7 @@ from itertools import*
 #              (1, 0, 1, a[3])]
 #     if len(table)==len(set(table)):
 #         for x in permutations('xyzw'):
-#             if [f(**dict(zip(x, r))) for r in table] == [0, 0, 0]:
+#             if [f3(**dict(zip(x, r))) for r in table] == [0, 0, 0]:
 #                 print(x)
 
 #3) - 3825
@@ -105,69 +105,69 @@ from itertools import*
 # from string import *
 # alf = ('0123456789' + ascii_lowercase)[:27]
 # for x in alf:
-#     t = int(f'123{x}24', 27) + int(f'135{x}78', 27)
+#     t = int(f3'123{x}24', 27) + int(f3'135{x}78', 27)
 #     if t%26==0:
 #         print(x, t/26)
 
 
 #15)
-# def f(x, a):
+# def f3(x, a):
 #     return (x%a!=0) <= ((x%28==0) <= (x%49!=0))
 #
 # for a in range(1, 1000):
-#     if all(f(x, a)==1 for x in range(1, 1000)):
+#     if all(f3(x, a)==1 for x in range(1, 1000)):
 #         print(a)
 
 #16)
 # from sys import setrecursionlimit
 # setrecursionlimit(10000)
-# def f(n):
+# def f3(n):
 #     if n<=7: return 1
-#     else: return n+2+f(n-1)
-# print(f(2024)-f(2020))
+#     else: return n+2+f3(n-1)
+# print(f3(2024)-f3(2020))
 
 
 #17)
-# f = [int(x) for x in open('17.txt')]
+# f3 = [int(x) for x in open('17.txt')]
 # mx = []
-# for i in range(len(f)):
+# for i in range(len(f3)):
 #     if i%19==0:
 #         mx.append(i)
 # mx = max(mx)
 #
 # otv = []
-# for i in range(len(f)-1):
-#     if (f[i]>mx or f[i+1]>mx):
-#         otv.append(f[i] + f[i+1])
+# for i in range(len(f3)-1):
+#     if (f3[i]>mx or f3[i+1]>mx):
+#         otv.append(f3[i] + f3[i+1])
 # print(len(otv), max(otv))
 
 
 #19-21)
-# def f(s1, s2, m):
+# def f3(s1, s2, m):
 #     if s1+s2>=123: return m%2==0
 #     if m==0: return 0
-#     h = [f(s1+1, s2, m-1), f(s1*2, s2, m-1),
-#          f(s1, s2+1, m-1), f(s1, s2*2, m-1)]
+#     h = [f3(s1+1, s2, m-1), f3(s1*2, s2, m-1),
+#          f3(s1, s2+1, m-1), f3(s1, s2*2, m-1)]
 #     return any(h) if (m-1)%2==0 else all(h)
-# print('19)', [x for x in range(1, 110) if f(13, x, 2)])
-# print('20)', [x for x in range(1, 110) if f(13, x, 3) and not f(13, x, 1)])
-# print('21)', [x for x in range(1, 110) if not f(13, x, 2) and f(13, x, 4)])
+# print('19)', [x for x in range(1, 110) if f3(13, x, 2)])
+# print('20)', [x for x in range(1, 110) if f3(13, x, 3) and not f3(13, x, 1)])
+# print('21)', [x for x in range(1, 110) if not f3(13, x, 2) and f3(13, x, 4)])
 
 #22) - 8
 
 #23)
-# def f(n, e):
+# def f3(n, e):
 #     if n>e: return 0
 #     if n==e: return 1
-#     if n<e: return f(n+1, e) + f(n*2, e)
-# print(f(4, 8)*f(8, 10)*f(10, 15))
+#     if n<e: return f3(n+1, e) + f3(n*2, e)
+# print(f3(4, 8)*f3(8, 10)*f3(10, 15))
 
 #24)
-# f = "".join([x for x in open('24_15339.txt')])
-# f = f.replace('6', '*').replace('7', '*').replace('8', '*').replace('9', '*').replace('A', '!').replace('B', '!').replace('C', '!')
+# f3 = "".join([x for x in open('24_15339.txt')])
+# f3 = f3.replace('6', '*').replace('7', '*').replace('8', '*').replace('9', '*').replace('A', '!').replace('B', '!').replace('C', '!')
 # k=mx=0
-# for x in range(len(f)-1):
-#     if f[x]!=f[x+1]:
+# for x in range(len(f3)-1):
+#     if f3[x]!=f3[x+1]:
 #         k+=1
 #         mx = max(mx, k)
 #     else:
@@ -181,13 +181,13 @@ from itertools import*
 #         print(i, i//2024)
 
 #26)
-n = int(open('26_15341.txt').readline())
-f = [int(x) for x in open('26_15341.txt')][1:]
-f = sorted(f, reverse=True)
-a = f[0]
-sp=[]
-for i in range(n-1):
-    if a-f[i]>=8:
-        a=f[i]
-        sp.append(a)
-print(len(sp), a)
+# n = int(open('26_15341.txt').readline())
+# f3 = [int(x) for x in open('26_15341.txt')][1:]
+# f3 = sorted(f3, reverse=True)
+# a = f3[0]
+# sp=[]
+# for i in range(n-1):
+#     if a-f3[i]>=8:
+#         a=f3[i]
+#         sp.append(a)
+# print(len(sp), a)

@@ -5,7 +5,7 @@
 # from itertools import *
 #
 #
-# def f(x, y, z, w):
+# def f3(x, y, z, w):
 #     return (x and not y) or (y == z) or (not w)
 #
 #
@@ -15,7 +15,7 @@
 #              (1, 0, 1, t[3])]
 #     if len(table) == len(set(table)):
 #         for p in permutations('xyzw'):
-#             if [f(**(dict(zip(p, r)))) for r in table] == [0, 0, 0]:
+#             if [f3(**(dict(zip(p, r)))) for r in table] == [0, 0, 0]:
 #                 print(p)
 # # Ответ - wzyx
 #
@@ -67,7 +67,7 @@
 #
 # 14)
 # for x in '0123456789abcdefghi':
-#     a = int(f'98897{x}21', 19) + int(f'2{x}923', 19)
+#     a = int(f3'98897{x}21', 19) + int(f3'2{x}923', 19)
 #     if a%18==0:
 #         print(a//18)
 #
@@ -82,12 +82,12 @@
 #
 #
 # 15)
-# def f(x, y, a):
+# def f3(x, y, a):
 #     return (x+2*y<a) or (y>x) or (x>60)
 #
 #
 # for a in range(0, 1001):
-#     if all(f(x, y, a)==1 for x in range(1000) for y in range(1000)):
+#     if all(f3(x, y, a)==1 for x in range(1000) for y in range(1000)):
 #         print(a)
 #         break
 #
@@ -96,11 +96,11 @@
 #
 #
 # 16)
-# def f(n):
+# def f3(n):
 #     if n>2024: return n
-#     if n<=2024: return n*f(n+1)
+#     if n<=2024: return n*f3(n+1)
 #
-# print(f(2022)/f(2024))
+# print(f3(2022)/f3(2024))
 #
 # Ответ - 4090506
 #
@@ -124,25 +124,25 @@
 #
 #
 #  19-21)
-# def f(s, m):
+# def f3(s, m):
 #     if s>=129: return m%2==0
 #     if m==0: return 0
-#     h = [f(s+1, m-1), f(s*2, m-1)]
+#     h = [f3(s+1, m-1), f3(s*2, m-1)]
 #     return any(h) if (m-1)%2==0 else all(h)
 #
 #
-# print('19)', [s for s in range(1, 129) if f(s, 2)])
-# print('20)', [s for s in range(1, 129) if f(s, 3) and not f(s, 1)])
-# print('21)', [s for s in range(1, 129) if f(s, 4)])
+# print('19)', [s for s in range(1, 129) if f3(s, 2)])
+# print('20)', [s for s in range(1, 129) if f3(s, 3) and not f3(s, 1)])
+# print('21)', [s for s in range(1, 129) if f3(s, 4)])
 #
 #
 # 22) 4
 #
 # 23)
-# def F(s, f):
-#     if s > f or s==11: return 0
-#     if f==s: return 1
-#     if s<f: return F(s+1, f) + F(s*2, f) + F(s**2, f)
+# def F(s, f3):
+#     if s > f3 or s==11: return 0
+#     if f3==s: return 1
+#     if s<f3: return F(s+1, f3) + F(s*2, f3) + F(s**2, f3)
 #
 #
 # print(F(2, 20))
@@ -150,12 +150,12 @@
 #
 #
 # 24)
-# f = open('24.txt').readline()
+# f3 = open('24.txt').readline()
 #
 # mx=-1
 # sp=[]
-# for i in range(len(f)):
-#     if f[i]=='T':
+# for i in range(len(f3)):
+#     if f3[i]=='T':
 #         sp.append(i)
 #
 # for i in range(101, len(sp)):

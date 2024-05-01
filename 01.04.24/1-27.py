@@ -1,6 +1,6 @@
 #2)
 from itertools import *
-# def f(x, y, z, w):
+# def f3(x, y, z, w):
 #     return (x and not y) or (x == z) or not w
 #
 #
@@ -10,7 +10,7 @@ from itertools import *
 #              (a[3], 1, 0, 1)]
 #     if len(table) == len(set(table)):
 #         for x in permutations('xyzw'):
-#             if [f(**dict(zip(x, r))) for r in table] == [0, 0, 0]:
+#             if [f3(**dict(zip(x, r))) for r in table] == [0, 0, 0]:
 #                 print(x)
 
 
@@ -49,62 +49,62 @@ from itertools import *
 
 
 #15)
-# def f(x, a):
+# def f3(x, a):
 #     return (70%a==0) and ((x%28==0) <= ((x%2!=0) <= (x%21!=0)))
 #
 #
 # for a in range(1, 1000):
-#     if all(f(x, a)==1 for x in range(1, 1000)):
+#     if all(f3(x, a)==1 for x in range(1, 1000)):
 #         print(a)
 
 
 #16)
-# def f(x):
+# def f3(x):
 #     if x>=2025: return x
-#     if x<2025: return x + 3 + f(x+3)
-# print(f(23) - f(21))
+#     if x<2025: return x + 3 + f3(x+3)
+# print(f3(23) - f3(21))
 
 
 #17)
-# f = [int(x) for x in open('17.txt')]
+# f3 = [int(x) for x in open('17.txt')]
 # sp = []
-# for i in range(len(f)-1):
-#     for j in range(i+1, len(f)):
-#         if (f[i]+f[j])%8==0:
-#             sp.append((f[i]+f[j]))
+# for i in range(len(f3)-1):
+#     for j in range(i+1, len(f3)):
+#         if (f3[i]+f3[j])%8==0:
+#             sp.append((f3[i]+f3[j]))
 # print(len(sp), max(sp))
 
 
 #23)
-# def f(s, m):
+# def f3(s, m):
 #     if s>=43: return m%2==0
 #     if m==0: return 0
-#     h = [f(s+1, m-1), f(s+2, m-1), f(s*2, m-1)]
+#     h = [f3(s+1, m-1), f3(s+2, m-1), f3(s*2, m-1)]
 #     return any(h) if (m-1)%2==0 else all(h)
 #
-# print([s for s in range(1, 43) if f(s, 2)])
-# print([s for s in range(1, 43) if f(s, 3) and not f(s, 1)])
-# print([s for s in range(1, 43) if f(s, 4) and not f(s, 2)])
+# print([s for s in range(1, 43) if f3(s, 2)])
+# print([s for s in range(1, 43) if f3(s, 3) and not f3(s, 1)])
+# print([s for s in range(1, 43) if f3(s, 4) and not f3(s, 2)])
 
 
 #23)
-# def f(s, e):
+# def f3(s, e):
 #     if s>e or s==6: return 0
 #     if s==e: return 1
-#     if s<e: return f(s+1, e) + f(s+2, e) + f(s*2, e)
-# print(f(4, 15) + f(15, 19))
+#     if s<e: return f3(s+1, e) + f3(s+2, e) + f3(s*2, e)
+# print(f3(4, 15) + f3(15, 19))
 
 
 #24)
-# f = open('24.txt').readline()
+# f3 = open('24.txt').readline()
 # k=0
 # sp=[]
 # mx = -100
-# for i in range(len(f)-1):
-#     if f[i]=='Y':
+# for i in range(len(f3)-1):
+#     if f3[i]=='Y':
 #         k+=1
-#     for j in range(i+1, len(f)):
-#         if f[j]=='Y':
+#     for j in range(i+1, len(f3)):
+#         if f3[j]=='Y':
 #             k+=1
 #         if k>100:
 #             k=0
@@ -114,33 +114,33 @@ from itertools import *
 
 
 #26)
-# f = [int(x) for x in open('26.txt')]
+# f3 = [int(x) for x in open('26.txt')]
 # sp = []
-# for i in range(len(f)-1):
-#     for j in range(i+1, len(f)):
-#         if ((f[i]%2==0 and f[j]%2!=0) or (f[i]%2!=0 and f[j]%2==0)) and (f[i]+f[j]) in f:
-#             sp.append((f[i]+f[j]))
-# print(len(f), max(sp))
+# for i in range(len(f3)-1):
+#     for j in range(i+1, len(f3)):
+#         if ((f3[i]%2==0 and f3[j]%2!=0) or (f3[i]%2!=0 and f3[j]%2==0)) and (f3[i]+f3[j]) in f3:
+#             sp.append((f3[i]+f3[j]))
+# print(len(f3), max(sp))
 
 
 #27A)
-# f = [list(map(int, x.split())) for x in open('27a.txt')]
-# n = f[0]
-# f = f[1:]
+# f3 = [list(map(int, x.split())) for x in open('27a.txt')]
+# n = f3[0]
+# f3 = f3[1:]
 # sp=[]
 # for i in range(20):
 #     for j in range(20):
-#         if (f[i][0]+f[j][0])%3==0:
-#             sp.append(f[i][0]+f[j][0])
+#         if (f3[i][0]+f3[j][0])%3==0:
+#             sp.append(f3[i][0]+f3[j][0])
 #
-#         if (f[i][0]+f[j][1])%3==0:
-#             sp.append(f[i][0] + f[j][1])
+#         if (f3[i][0]+f3[j][1])%3==0:
+#             sp.append(f3[i][0] + f3[j][1])
 #
-#         if (f[i][1]+f[j][0])%3==0:
-#             sp.append(f[i][1] + f[j][0])
+#         if (f3[i][1]+f3[j][0])%3==0:
+#             sp.append(f3[i][1] + f3[j][0])
 #
-#         if (f[i][1]+f[j][1])%3==0:
-#             sp.append(f[i][1] + f[j][1])
+#         if (f3[i][1]+f3[j][1])%3==0:
+#             sp.append(f3[i][1] + f3[j][1])
 # print(max(sp))
 
 

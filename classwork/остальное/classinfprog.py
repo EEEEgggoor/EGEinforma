@@ -67,11 +67,11 @@
 
 #Самостоятельная работа 21.04.23
 #1)
-# f = open('24_1.txt').readline()
+# f3 = open('24_1.txt').readline()
 # k = 1
 # m = 0
-# for i in range(1, len(f)):
-#     if f[i] == 'B' and f[i-1]=='B':
+# for i in range(1, len(f3)):
+#     if f3[i] == 'B' and f3[i-1]=='B':
 #         k += 1
 #     else:
 #         m = max(m, k)
@@ -79,8 +79,8 @@
 # m = max(m, k)
 # print(m)
 #2)
-# f = open("24_3.txt")
-# x = f.read()
+# f3 = open("24_3.txt")
+# x = f3.read()
 # count = count_old = m = 0
 # for i in x:
 # 	if i == "D":
@@ -96,8 +96,8 @@
 
 
 #3)
-# f = open("24_1.txt")
-# x = f.read()
+# f3 = open("24_1.txt")
+# x = f3.read()
 # count = count_old = m = 0
 # for i in x:
 # 	if i == "D":

@@ -2,7 +2,7 @@ from itertools import *
 
 
 # 2)
-# def f(x, y, z, w):
+# def f3(x, y, z, w):
 #     return (y <= z) and not ((y or w) <= (z and x))
 #
 # for a in product([0, 1], repeat=5):
@@ -11,7 +11,7 @@ from itertools import *
 #              (1, 1, a[3], a[4])]
 #     if len(table)==len(set(table)):
 #         for x in permutations('xyzw'):
-#             if [f(**dict(zip(x, r))) for r in table] == [1, 1, 1]:
+#             if [f3(**dict(zip(x, r))) for r in table] == [1, 1, 1]:
 #                 print(x)
 
 
@@ -66,51 +66,51 @@ from itertools import *
 
 
 # 15)
-# def f(m, n, a):
+# def f3(m, n, a):
 #     return (2 * m + 3 * n > 40) or ((m < a) and (n <= a))
 #
 #
 # for a in range(100):
-#     if all(f(m, n, a) == 1 for m in range(1000) for n in range(1000)):
+#     if all(f3(m, n, a) == 1 for m in range(1000) for n in range(1000)):
 #         print(a)
 #         break
 
 
 # 16)
-# def f(x):
+# def f3(x):
 #     if x == 1 or x == 2: return 1
-#     if x > 2: return f(x - 2) * (x - 1)
-# print(f(8))
+#     if x > 2: return f3(x - 2) * (x - 1)
+# print(f3(8))
 
 
 #17)
-# f = [int(x) for x in open('17.txt')]
+# f3 = [int(x) for x in open('17.txt')]
 # mn=[]
-# for i in range(len(f)-1):
-#     for j in range(i, len(f)):
-#         if (f[i]+f[j])%2!=0 and (f[i]*f[j])%5==0:
-#             mn.append(f[i]+f[j])
+# for i in range(len(f3)-1):
+#     for j in range(i, len(f3)):
+#         if (f3[i]+f3[j])%2!=0 and (f3[i]*f3[j])%5==0:
+#             mn.append(f3[i]+f3[j])
 # print(len(mn), max(mn))
 
 
 #19-21)
-# def f(s, m):
+# def f3(s, m):
 #     if s>=39: return m%2==0
 #     if m==0: return 0
-#     h = [f(s+1, m-1), f(s+2, m-1), f(s*2, m-1)]
+#     h = [f3(s+1, m-1), f3(s+2, m-1), f3(s*2, m-1)]
 #     return any(h) if (m-1)%2==0 else all(h)
 #
-# print('19)', [s for s in range(1, 39) if f(s, 2)])
-# print('20)', [s for s in range(1, 39) if not f(s, 1) and f(s, 3)])
-# print('21)', [s for s in range(1, 39) if f(s, 4) and not f(s, 2)])
+# print('19)', [s for s in range(1, 39) if f3(s, 2)])
+# print('20)', [s for s in range(1, 39) if not f3(s, 1) and f3(s, 3)])
+# print('21)', [s for s in range(1, 39) if f3(s, 4) and not f3(s, 2)])
 
 
 #23)
-# def f(s, e):
+# def f3(s, e):
 #     if s>e or s==10 or s==11: return 0
 #     if s==e: return 1
-#     if s<e: return f(s+1, e) + f(s+2, e) + f(s*3, e)
-# print(f(1, 8)*f(8, 27))
+#     if s<e: return f3(s+1, e) + f3(s+2, e) + f3(s*3, e)
+# print(f3(1, 8)*f3(8, 27))
 
 
 #24)

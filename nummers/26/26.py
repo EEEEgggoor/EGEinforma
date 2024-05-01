@@ -1,36 +1,36 @@
-# f = sorted([int(x) for x in open("26_0.txt")][1:], reverse=True)
-# a = f[0]
+# f3 = sorted([int(x) for x in open("26_0.txt")][1:], reverse=True)
+# a = f3[0]
 # s = []
 # s.append(a)
 #
-# for i in range(len(f)):
-#     if a - f[i] >=8:
-#         a = f[i]
+# for i in range(len(f3)):
+#     if a - f3[i] >=8:
+#         a = f3[i]
 #         s.append(a)
 # print(len(s), a)
 
 
 # 10726
-# f = open("26_1.txt")
-# n = int(f.readline())
-# f = [list(map(int, x.split())) for x in f]
+# f3 = open("26_1.txt")
+# n = int(f3.readline())
+# f3 = [list(map(int, x.split())) for x in f3]
 # mn = [0] * 44641
 # for i in range(n):
-#    for j in range(f[i][0], f[i][1]):
+#    for j in range(f3[i][0], f3[i][1]):
 #        mn[j] = 1
 # print(sum(mn))
-# f = ''.join(map(str, mn))
+# f3 = ''.join(map(str, mn))
 # потом как в 24, находим макс кол-во 1
 
 
 # komp-ege - #12933
-# f = open("26_2.txt")
-# n, k = [int(x) for x in f.readline().split()]
+# f3 = open("26_2.txt")
+# n, k = [int(x) for x in f3.readline().split()]
 # a = []
 # lenta = [0] * (n+1)
 # start, end = 1, n
 # for i in range(1, n + 1):
-#    ts, to = [int(x) for x in f.readline().split()]
+#    ts, to = [int(x) for x in f3.readline().split()]
 #    a.append((ts, i, 's'))
 #    a.append((to, i, 'h'))
 # a.sort()
@@ -50,16 +50,16 @@
 
 
 # kompege 13101
-# f = open('26_3.txt')
-# n = f.readline()
+# f3 = open('26_3.txt')
+# n = f3.readline()
 # k2 = 0
 # okno1 = []
 # okno2 = []
 # kn = 0
-# f = [tuple(map(int, x.split())) for x in f]
+# f3 = [tuple(map(int, x.split())) for x in f3]
 #
-# f.sort()
-# for st, t, o in f:
+# f3.sort()
+# for st, t, o in f3:
 #     okno1 = [x for x in okno1 if x > st]
 #     okno2 = [x for x in okno2 if x > st]
 #
@@ -87,28 +87,28 @@
 
 
 # kompege12478
-# f = open("26_4.txt")
-# n = f.readline()
-# f = [tuple(map(int, x.split())) for x in f]
-# f.sort()
+# f3 = open("26_4.txt")
+# n = f3.readline()
+# f3 = [tuple(map(int, x.split())) for x in f3]
+# f3.sort()
 # n = (tuple(map(int, n.split())))[1:]
 # sp = []
-# for i in range(len(f)):
-#     if f[i][0]!=f[i+1][0]:
-#         sp.append(f[i])
+# for i in range(len(f3)):
+#     if f3[i][0]!=f3[i+1][0]:
+#         sp.append(f3[i])
 #         break
 #
 # sm=0
 # mx = -100
-# for i in range(len(f)-1):
-#     if f[i][0]==sp[-1][1]:
-#         for j in range(i, len(f)):
-#             if f[j][0]!=f[j+1][0]:
-#                 sp.append(f[j])
+# for i in range(len(f3)-1):
+#     if f3[i][0]==sp[-1][1]:
+#         for j in range(i, len(f3)):
+#             if f3[j][0]!=f3[j+1][0]:
+#                 sp.append(f3[j])
 #                 break
 #
 # for i in range(len(sp)):
-#     sm = f[i][1] - f[i][0]
+#     sm = f3[i][1] - f3[i][0]
 #     mx = max(sm, mx)
 #
 #
@@ -116,42 +116,42 @@
 
 
 # kompege11605
-# f = open("26_5.txt")
-# n = f.readline()
-# f = [tuple(map(int, x.split())) for x in f]
-# f.sort()
+# f3 = open("26_5.txt")
+# n = f3.readline()
+# f3 = [tuple(map(int, x.split())) for x in f3]
+# f3.sort()
 # n = (tuple(map(int, n.split())))
 #
 #
 #
 # sp=[]
-# sp.append(f[0][1])
-# per = f[0][1]
+# sp.append(f3[0][1])
+# per = f3[0][1]
 #
 #
-# for i in range(len(f)):
-#     if f[i][0]>per:
-#         for j in range(i-1, len(f)):
-#             if f[j][0] != f[j + 1][0]:
-#                 sp.append(f[j])
-#                 per = f[j][1]
+# for i in range(len(f3)):
+#     if f3[i][0]>per:
+#         for j in range(i-1, len(f3)):
+#             if f3[j][0] != f3[j + 1][0]:
+#                 sp.append(f3[j])
+#                 per = f3[j][1]
 #                 break
 #
-#     if f[i][0]==per:
-#         for j in range(i, len(f)):
-#             if f[j][0] != f[j + 1][0]:
-#                 sp.append(f[j])
-#                 per = f[j][1]
+#     if f3[i][0]==per:
+#         for j in range(i, len(f3)):
+#             if f3[j][0] != f3[j + 1][0]:
+#                 sp.append(f3[j])
+#                 per = f3[j][1]
 #                 break
 #
 #
 # print(n[1] - len(sp), len(sp))
-# print(f[:1000])
+# print(f3[:1000])
 # print(sp[:100])
 
 # temp = 25
 #
-# for ele in f:
+# for ele in f3:
 #     if ele[0] < temp:
 #         temptemp = ele[0]
 #     temp =temptemp

@@ -1,5 +1,5 @@
-# with open('26.txt') as f:
-#     s = [int(x) for x in f]
+# with open('26.txt') as f3:
+#     s = [int(x) for x in f3]
 #     s = sorted(s[1:], reverse=True)
 #     k, mini = 1, s[0]
 #     for i in range(1, len(s)):

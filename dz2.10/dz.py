@@ -1,6 +1,6 @@
-# f = open("24.txt").read()
+# f3 = open("24.txt").read()
 # count = count_old = m = 0
-# for i in f:
+# for i in f3:
 #     if i == "A":
 #         m = max(m, count + count_old + 1)
 #         count_old = count
@@ -11,7 +11,7 @@
 # print(m)
 
 
-# def f(n):
+# def f3(n):
 #     d = set()
 #     for i in range(1, int(n ** 0.5) + 1):
 #         if n % i == 0:
@@ -24,17 +24,17 @@
 # s=[]
 # for i in range(84052, 84130):
 #     s1 = []
-#     s1.append(len(f(i)))
+#     s1.append(len(f3(i)))
 #     s1.append(i)
 #     s.append(s1)
 # print(sorted(s)[-1])
 
 # s = []
-# f = [int(x) for x in open('26.txt')][1:]
-# for i in range(0, len(f)):
-#     for j in range(i, len(f)-1):
-#         if (f[i] + f[j] in f) and f[i] % 2 != f[j] % 2:
-#             s.append(f[i] + f[j])
+# f3 = [int(x) for x in open('26.txt')][1:]
+# for i in range(0, len(f3)):
+#     for j in range(i, len(f3)-1):
+#         if (f3[i] + f3[j] in f3) and f3[i] % 2 != f3[j] % 2:
+#             s.append(f3[i] + f3[j])
 # print(len(s), max(s))
 
 

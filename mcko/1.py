@@ -3,14 +3,14 @@
 
 
 #      №2
-# def f(a, b, c):
+# def f3(a, b, c):
 #     return a or not b and c
 #
 #
 # for a in range(2):
 #     for b in range(2):
 #         for c in range(2):
-#             print(a, b, c, int(f(a, b, c)))
+#             print(a, b, c, int(f3(a, b, c)))
 
 
 #       №5
@@ -34,8 +34,8 @@
 # q=7
 # e=11
 # for d in range(40):
-#     f = (p-1)*(q-1)
-#     if (d*e)%f==1:
+#     f3 = (p-1)*(q-1)
+#     if (d*e)%f3==1:
 #         print(d)
 
 
@@ -44,13 +44,13 @@
 
 
 #       №11
-# def f(c, e):
+# def f3(c, e):
 #     if c > e or c == 32: return 0
 #     if c == e: return 1
-#     if c < e: return f(c + 3, e) + f(c + 4, e) + f(c * 3, e)
+#     if c < e: return f3(c + 3, e) + f3(c + 4, e) + f3(c * 3, e)
 #
 #
-# print(f(4, 16) * f(16, 46))
+# print(f3(4, 16) * f3(16, 46))
 
 
 #       №13
