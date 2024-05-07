@@ -23,13 +23,13 @@ from itertools import *
 
 # 4) - 24
 
-for N in range(1000, 10000):
-    if str(N).count('0')==0:
-        n = (list(map(int, [str(x) for x in str(N)])))
-        T = sum(n)
-        r = [(T%x) for x in n]
-        R = list(map(str, sorted(r, reverse=True)))
-        R = int("".join(R))
-        if R>2000:
-            print(N)
-            break
+# for N in range(1000, 10000):
+#     if str(N).count('0')==0:
+#         n = (list(map(int, [str(x) for x in str(N)])))
+#         T = sum(n)
+#         r = [(T%x) for x in n]
+#         R = list(map(str, sorted(r, reverse=True)))
+#         R = int("".join(R))
+#         if R>2000:
+#             print(N)
+#             break
